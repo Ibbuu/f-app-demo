@@ -1,6 +1,6 @@
 {
     "$schema": "https://docs.facets.cloud/schemas/mongo/sizing.schema",
-    "small": {
+    "S": {
         "podCPULimit": 1,
         "podMemoryLimit": 2,
         "volumeSize": 10
