@@ -4,6 +4,6 @@
     "k8s_service_names": [
         "facets-demo-mongo"
     ],
-    "size": "small",
+    "size": "S",
     "k8s_slave_service_names": []
 }
