@@ -1,8 +1,10 @@
 {
-    "$schema": "..//sizing.schema",
+    "$schema": "https://docs.facets.cloud/schemas/mongo/sizing.schema",
     "S": {
         "podCPULimit": 1,
-        "podMemoryLimit": 2
+        "podMemoryLimit": 2,
+        "volumeSize": 10
+        
         
     }
 }
