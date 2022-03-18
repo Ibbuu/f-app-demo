@@ -1,5 +1,5 @@
 {
-    "$schema": "..//..//mongo.schema",
+    "$schema": "https://docs.facets.cloud/schemas/mongo/instances/mongo.schema",
     "name": "facets-demo-mongo",
     "k8s_service_names": [
         "facets-demo-mongo"
