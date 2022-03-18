@@ -1,0 +1,9 @@
+{
+    "$schema": "https://docs.facets.cloud/schemas/mongo/instances/mongo.schema",
+    "name": "facets-demo-mongo",
+    "k8s_service_names": [
+        "facets-demo-mongo"
+    ],
+    "size": "S",
+    "k8s_slave_service_names": []
+}

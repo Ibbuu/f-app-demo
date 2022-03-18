@@ -1,0 +1,8 @@
+{
+    "$schema": "..//sizing.schema",
+    "S": {
+        "podCPULimit": 1,
+        "podMemoryLimit": 2
+        
+    }
+}

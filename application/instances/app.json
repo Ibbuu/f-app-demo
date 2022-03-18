@@ -9,22 +9,43 @@
      "spec": {
    
       "env": {
-   
+        "MONGO_HOST": {
+            "type": "static",
+            "default": "facets-demo-mongo.default"
+          },
+          "MONGODB_USER": {
+            "type": "credential",
+            "permissionName": "facets-demo-mongo-access-api",
+            "attribute": "userName"
+          },
+          "MONGODB_PASSWORD": {
+            "type": "credential",
+            "permissionName": "facets-demo-mongo-access-api",
+            "attribute": "password"
+          }
+        }
       },
       "loadbalancing": {
        "rules": [
         {
-         "ingress": "ingress",
+         "ingress": "appingress",
          "path": "/",
          "portName" : "port5000"
         }
        ]
       },
-      "permission": [],
+      "permission": [
+        {
+            "name": "facets-demo-mongo",
+            "resourceType": "mongo",
+            "resourceName": "facets-demo-mongo",
+            "permission": "READ_WRITE"
+          }
+      ],
       "release": {
        "strategy": "RollingUpdate",
        "build": {
-        "image": "313496281593.dkr.ecr.us-east-1.amazonaws.com/facets/facets-demo1/app:facets1"
+        "image": "313496281593.dkr.ecr.us-east-1.amazonaws.com/facets/facets-demo1/app:facets2"
        }
       },
       "runtime": {
@@ -43,4 +64,4 @@
        }]
       }
      }
-    }
+    
