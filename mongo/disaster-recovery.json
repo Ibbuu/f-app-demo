@@ -1,0 +1,16 @@
+{
+    "$schema": "https://docs.facets.cloud/schemas/mongo/disaster-recovery.schema",
+    "creationStrategy": {
+        "triggerSchedule": []
+    },
+    "enabled": false,
+    "retentionStrategy": {
+        "incrementalWindow": {},
+        "rollingWindow": {
+            "days": 0,
+            "hours": 0,
+            "weeks": 0
+        },
+        "triggerSchedule": []
+    }
+}
