@@ -25,7 +25,7 @@
     "loadbalancing": {
       "rules": [
         {
-          "ingress": "appingress",
+          "ingress": "ingress",
           "path": "/",
           "portName": "port5000"
         }
