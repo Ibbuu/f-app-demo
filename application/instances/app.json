@@ -1,67 +1,66 @@
 {
-    "$schema": "https://docs.facets.cloud/schemas/application/instances/application.schema",
-     "kind": "facets.modules.common.application",
-     "disabled": false,
-     "apiVersion": "v2",
-     "metadata": {
-   
-     },
-     "spec": {
-   
-      "env": {
-        "MONGO_HOST": {
-            "type": "static",
-            "default": "facets-demo-mongo.default"
-          },
-          "MONGODB_USER": {
-            "type": "credential",
-            "permissionName": "facets-demo-mongo-access-api",
-            "attribute": "userName"
-          },
-          "MONGODB_PASSWORD": {
-            "type": "credential",
-            "permissionName": "facets-demo-mongo-access-api",
-            "attribute": "password"
-          }
-        }
+  "$schema": "https://docs.facets.cloud/schemas/application/instances/application.schema",
+  "kind": "facets.modules.common.application",
+  "disabled": false,
+  "apiVersion": "v2",
+  "metadata": {
+  },
+  "spec": {
+    "env": {
+      "MONGO_HOST": {
+        "type": "static",
+        "default": "facets-demo-mongo.default"
       },
-      "loadbalancing": {
-       "rules": [
-        {
-         "ingress": "appingress",
-         "path": "/",
-         "portName" : "port5000"
-        }
-       ]
+      "MONGODB_USER": {
+        "type": "credential",
+        "permissionName": "facets-demo-mongo-access-api",
+        "attribute": "userName"
       },
-      "permission": [
+      "MONGODB_PASSWORD": {
+        "type": "credential",
+        "permissionName": "facets-demo-mongo-access-api",
+        "attribute": "password"
+      }
+    },
+    "loadbalancing": {
+      "rules": [
         {
-            "name": "facets-demo-mongo",
-            "resourceType": "mongo",
-            "resourceName": "facets-demo-mongo",
-            "permission": "READ_WRITE"
-          }
-      ],
-      "release": {
-       "strategy": "RollingUpdate",
-       "build": {
+          "ingress": "appingress",
+          "path": "/",
+          "portName": "port5000"
+        }
+      ]
+    },
+    "permission": [
+      {
+        "name": "facets-demo-mongo",
+        "resourceType": "mongo",
+        "resourceName": "facets-demo-mongo",
+        "permission": "READ_WRITE"
+      }
+    ],
+    "release": {
+      "strategy": "RollingUpdate",
+      "build": {
         "image": "313496281593.dkr.ecr.us-east-1.amazonaws.com/facets/facets-demo1/app:facets2"
-       }
-      },
-      "runtime": {
-       "size": {
+      }
+    },
+    "runtime": {
+      "size": {
         "value": "small",
         "namespace": "GP"
-       },
-       "autoscaling": {
+      },
+      "autoscaling": {
         "cpuThreshold": "50",
         "max": 1,
         "min": 1
-       },
-       "ports": [{
-        "name": "port5000",
-        "port": 5000
-       }]
-      }
-     }
-    
+      },
+      "ports": [
+        {
+          "name": "port5000",
+          "port": 5000
+        }
+      ]
+    }
+  }
+}
