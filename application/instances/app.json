@@ -42,7 +42,7 @@
     "release": {
       "strategy": "RollingUpdate",
       "build": {
-        "image": "313496281593.dkr.ecr.us-east-1.amazonaws.com/facets/facets-demo1/app:facets7"
+        "image": "313496281593.dkr.ecr.us-east-1.amazonaws.com/facets/facets-demo1/app:facets8"
       }
     },
     "runtime": {
