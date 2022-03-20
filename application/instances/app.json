@@ -13,12 +13,12 @@
       },
       "MONGODB_USER": {
         "type": "credential",
-        "permissionName": "facets-demo-mongo-access-api",
+        "permissionName": "facets-demo-mongo",
         "attribute": "userName"
       },
       "MONGODB_PASSWORD": {
         "type": "credential",
-        "permissionName": "facets-demo-mongo-access-api",
+        "permissionName": "facets-demo-mongo",
         "attribute": "password"
       }
     },
